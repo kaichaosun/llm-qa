@@ -1,5 +1,17 @@
 # Q&A Summary by LLM
 
+## Rust
+
+### What's #![no_std]
+
+The #![no_std] attribute is a compiler directive used in Rust to indicate that the code will not depend on the standard library (std). It tells the compiler to exclude the standard library and use the smaller, platform-specific core library instead.
+
+When #![no_std] is used, the generated binary will not have access to features provided by the standard library, such as file I/O, threading, or dynamic memory allocation. This is often used in embedded systems or other resource-constrained environments where the overhead of the standard library is not desired or not available.
+
+Without the standard library, certain functionality may need to be implemented manually or using external libraries specifically designed for the target platform. Additionally, the core library provides basic types and essential language features necessary for Rust code to compile and run.
+
+In summary, #![no_std] is a compiler directive used to build Rust code without the standard library, enabling more lightweight and platform-specific applications.
+
 ## Virtual Machine
 
 ### How to choose between risc v and web assembly?
