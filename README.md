@@ -12,6 +12,40 @@ Without the standard library, certain functionality may need to be implemented m
 
 In summary, #![no_std] is a compiler directive used to build Rust code without the standard library, enabling more lightweight and platform-specific applications.
 
+## Mobile App
+
+## Good and bad of expo with React Native?
+
+Expo is a popular development platform and toolkit for building mobile applications using React Native. Here are some advantages and disadvantages of using Expo:
+
+Advantages of Expo:
+
+1. Ease of Setup: Expo simplifies the initial setup process by providing a command-line tool that allows developers to create, build, and run projects without the need for complex configuration.
+
+2. Quick Prototyping: Expo offers a wide range of pre-built components, UI libraries, and APIs that accelerate the development process and enable rapid prototyping. It provides a rich set of ready-to-use features, such as camera access, push notifications, and location services.
+
+3. Over-the-Air (OTA) Updates: Expo allows you to push updates to your app without requiring users to download and install a new version from the app store. This makes it easier to fix bugs, add new features, and improve the user experience.
+
+4. Simplified Build Process: Expo handles the build process for you, providing a web-based interface to build iOS and Android binaries without the need for maintaining native build tools and environments.
+
+5. Expo Ecosystem: Expo has a vibrant community and ecosystem with extensive documentation, forums, and libraries. It provides access to Expo SDK, which offers a wide range of APIs and services for common mobile app functionality.
+
+
+Disadvantages of Expo:
+
+1. Limited Native Functionality: Expo aims to provide a unified development experience, but it comes with some limitations. If your app requires extensive access to native features or custom native module integrations, Expo may not provide the flexibility you need.
+
+2. Dependency on Expo Services: Expo relies on its own set of services and infrastructure. While this can simplify development, it also means your app's functionality is tied to Expo's platform. If Expo services experience downtime or limitations, it may impact your app's performance.
+
+3. Restricted Native Code Modifications: Expo restricts direct modification of native code. If you require extensive customization or need to integrate specific native libraries, you may find Expo's limitations restrictive.
+
+4. Larger App Size: Expo apps tend to have a larger size compared to bare React Native apps since Expo bundles many necessary dependencies and libraries by default.
+
+5. Limited Control over the Build Process: Expo handles the build process for you, but this means you have less control over the fine-tuning and optimization of the final app binaries.
+
+
+It's important to carefully evaluate your project's requirements and consider the trade-offs before deciding to use Expo. While Expo can be an excellent choice for rapid prototyping, smaller apps, or projects that don't require extensive native functionality, you should assess whether its limitations align with your specific needs.
+
 ## Virtual Machine
 
 ### How to choose between risc v and web assembly?
