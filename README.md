@@ -91,3 +91,21 @@ The landscape of IC (Integrated Circuit) development encompasses various aspects
 10. Industry Trends: The IC development landscape is influenced by various industry trends, including artificial intelligence (AI), Internet of Things (IoT), automotive electronics, and high-performance computing. These trends drive the demand for specialized ICs, such as AI accelerators, sensors, and automotive controllers.
 
 Overall, the landscape of IC development is characterized by a combination of design methodologies, EDA tools, fabrication technologies, verification techniques, and emerging trends. It is a dynamic field that continuously evolves to meet the demands of increasingly complex applications and technological advancements.
+
+### how to use pcsc with webusb?
+
+Using PC/SC (Personal Computer/Smart Card) functionality with WebUSB is not directly supported or available as a standard feature. PC/SC is an API used for communicating with smart card readers and smart cards on desktop operating systems.
+
+WebUSB, on the other hand, provides a way to interact with USB devices from web applications, but it doesn't have built-in support for PC/SC or smart card communication.
+
+If you need to access smart card readers or smart cards from a web application, you typically have the following options:
+
+1. Native Messaging: You can create a browser extension or native application that communicates with the smart card reader using PC/SC APIs. The web application can then communicate with the extension or native application using messaging mechanisms like Native Messaging (supported in Chrome) or other browser-specific methods. The extension/native application acts as a bridge between the web application and the PC/SC functionality.
+
+2. WebRTC or WebSocket: If you have control over the smart card reader or can modify its firmware, you may be able to implement a WebRTC or WebSocket server on the reader itself. The web application can then establish a direct connection with the smart card reader through the network using the appropriate protocols.
+
+3. Cloud-based Solutions: Another approach is to utilize cloud-based smart card solutions. In this case, the smart card reader is connected to a server or cloud service, and the web application communicates with the server/cloud service through APIs or protocols provided by the service. The server/cloud service then interacts with the smart card reader using PC/SC or other appropriate mechanisms.
+
+It's important to note that these approaches may have specific requirements, limitations, or security considerations. The choice of the approach depends on your specific use case, requirements, and available resources.
+
+Keep in mind that these workarounds might introduce additional complexity and may not be suitable for all scenarios. If you require direct and comprehensive access to PC/SC functionality, developing a native desktop application might be a more appropriate solution.
