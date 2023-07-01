@@ -14,7 +14,7 @@ In summary, #![no_std] is a compiler directive used to build Rust code without t
 
 ## Mobile App
 
-## Good and bad of expo with React Native?
+### Good and bad of expo with React Native?
 
 Expo is a popular development platform and toolkit for building mobile applications using React Native. Here are some advantages and disadvantages of using Expo:
 
@@ -45,6 +45,22 @@ Disadvantages of Expo:
 
 
 It's important to carefully evaluate your project's requirements and consider the trade-offs before deciding to use Expo. While Expo can be an excellent choice for rapid prototyping, smaller apps, or projects that don't require extensive native functionality, you should assess whether its limitations align with your specific needs.
+
+### store api key in react native app
+
+Storing API keys securely in a React Native app is crucial to protect sensitive information. Here are some approaches you can consider:
+
+1. Environment Variables: Use environment variables to store your API keys. Create a .env file in the root directory of your React Native project and define your API keys as environment variables. You can then access these variables using a package like react-native-config (as mentioned in the previous response) or react-native-dotenv.
+
+2. Dotenv Files: Similar to environment variables, you can create separate .env files for different environments (e.g., .env.production, .env.staging) and store your API keys there. Make sure these files are not committed to your version control system to keep the keys secure.
+
+3. Remote Configuration: Instead of embedding API keys directly into your app, you can store them on a remote server and fetch them at runtime. This allows you to update the keys without requiring an app update. However, make sure you secure the remote configuration service with proper authentication and authorization mechanisms.
+
+4. Key Management Services: Consider using key management services provided by cloud platforms like Google Cloud Platform (GCP), Amazon Web Services (AWS), or Azure. These services, such as AWS Secrets Manager or GCP Secret Manager, allow you to securely store and retrieve sensitive information like API keys. Your app can then fetch the keys from the key management service during runtime.
+
+5. API Proxy: Use an API proxy server to handle the API requests and store the API keys on the server-side. Instead of making requests directly from the app, your app communicates with the proxy server, which authenticates the request and adds the API key before forwarding it to the target API. This approach keeps the API key hidden from the client-side code.
+
+Remember, regardless of the approach you choose, it's essential to follow security best practices and protect your API keys from unauthorized access.
 
 ## Virtual Machine
 
@@ -240,3 +256,23 @@ While I can provide some examples of companies that are likely to be involved as
 - Tsinghua University Climate Change and Sustainable Development Research Institute
 
 Please note that this list is not exhaustive, and there may be other companies involved as well. The participation of specific companies can depend on their industry sector, their carbon emissions, and their interest in carbon trading and compliance with emissions reduction targets.
+
+## Cryptography
+
+### where VRF used?
+
+VRFs (Verifiable Random Functions) have several applications across different domains. Here are some common use cases where VRFs are utilized:
+
+1. Randomness Generation: VRFs can be used to generate verifiably random numbers. This is particularly useful in scenarios where a trusted source of randomness is required, such as in cryptographic protocols, secure multiparty computation, gambling applications, and random beacon systems.
+
+2. Public Key Infrastructure (PKI): VRFs can be employed in the context of PKI to generate unique identifiers or nonces. These identifiers can be used in certificate issuance, secure timestamping, domain name systems, and other applications where uniqueness and verifiability are crucial.
+
+3. Secure Elections and Lotteries: VRFs enable secure and verifiable selection of winners in elections, lotteries, or other selection processes. They allow participants and observers to independently verify the fairness and randomness of the selection without revealing the underlying inputs or compromising the secrecy of the selection process.
+
+4. Cryptographic Protocols: VRFs find utility in various cryptographic protocols. For example, they can be used in secure multiparty computation to ensure that inputs are kept private while still verifying the correctness of the computation. VRFs can also be used in distributed key generation to securely generate private and public key pairs without relying on a trusted third party.
+
+5. Privacy-Preserving Systems: VRFs can contribute to privacy-preserving systems by providing a mechanism for generating unique pseudonyms or anonymous credentials. This can enable secure and unlinkable authentication and identification schemes without revealing the real identity of the users.
+
+6. Blockchain and Cryptocurrencies: VRFs play a crucial role in the design and operation of blockchains and cryptocurrencies. They are used in consensus algorithms to select block validators in a deterministic and verifiable manner while maintaining randomness and preventing manipulation. VRFs are also used for generating cryptographic keys, signatures, and secure addresses.
+
+It's important to note that the specific applications and use cases of VRFs continue to evolve as research progresses and new cryptographic protocols and systems are developed. The versatility and verifiability provided by VRFs make them valuable in a wide range of scenarios where randomness, uniqueness, and trustworthiness are essential.
